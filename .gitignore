@@ -1,0 +1,7 @@
+# Dirs
+node_modules/
+dist/
+
+# Files
+yarn.lock
+*.spec.js.snap
