@@ -24,3 +24,8 @@ console.log(id);
 const parsed = parseSnowflakeID(id);
 console.log(parsed);
 ```
+
+
+# References
+- [Twitter-Archive](https://github.com/twitter-archive/snowflake)
+- [Discord](https://discord.com/developers/docs/reference#snowflakes)
