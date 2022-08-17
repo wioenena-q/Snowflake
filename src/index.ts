@@ -41,13 +41,13 @@ export function generateSnowflakeID(
 
   if (workerId > MAX_WORKER_ID || workerId < 0n) {
     throw new RangeError(
-      `worker Id can't be greater than ${MAX_WORKER_ID} or less than 0`
+      `Worker id can't be greater than ${MAX_WORKER_ID} or less than 0`
     );
   }
 
   if (processId > MAX_PROCESS_ID || processId < 0n) {
     throw new RangeError(
-      `process Id can't be greater than ${MAX_PROCESS_ID} or less than 0`
+      `Process id can't be greater than ${MAX_PROCESS_ID} or less than 0`
     );
   }
 
