@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Twitter Snowflake ID implemented for nodejs and deno",
   "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "node:test": "mocha src/__tests__/node/*.spec.js",
