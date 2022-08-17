@@ -19,7 +19,7 @@ const epoch = Date.now();
 const workerId = 2;
 const processId = 0;
 
-const id = generateSnowflakeID(epoch);
+const id = generateSnowflakeID(epoch, workerId, processId);
 console.log(id);
 const parsed = parseSnowflakeID(id);
 console.log(parsed);
