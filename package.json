@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "mocha src/__tests__/node/*.spec.js"
+    "node:test": "mocha src/__tests__/node/*.spec.js",
+    "deno:test": "deno test src/__tests__/deno/index.spec.ts",
+    "test": "npm run node:test && npm run deno:test"
   },
   "keywords": [
     "twitter",
