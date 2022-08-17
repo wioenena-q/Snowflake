@@ -13,12 +13,12 @@ Deno.test("should generate a snowflake ID", () => {
 Deno.test("Properly mask the identity of a snowflake", () => {
   const workerId = 0x1n;
   const processId = 0x0n;
-  const timestamp = BigInt(Date.now());
-  const id = generateSnowflakeID(timestamp, workerId, processId);
-  const parsed = parseSnowflakeID(timestamp, id);
+  const epoch = BigInt(Date.now());
+  const id = generateSnowflakeID(epoch, workerId, processId);
+  const parsed = parseSnowflakeID(epoch, id);
   expect(parsed.workerId).eq(workerId);
   expect(parsed.processId).eq(processId);
-  expect(parsed.timestamp).eq(timestamp);
+  expect(Number(parsed.timestamp)).lessThan(Date.now() + 50);
 });
 
 Deno.test(
