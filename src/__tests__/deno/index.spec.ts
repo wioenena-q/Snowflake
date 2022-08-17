@@ -10,7 +10,7 @@ Deno.test("should generate a snowflake ID", () => {
   expect(Number(id)).greaterThan(0);
 });
 
-Deno.test("Properly mask the identity of a snowflake", () => {
+Deno.test("Properly mask the ID of a snowflake", () => {
   const workerId = 0x1n;
   const processId = 0x0n;
   const epoch = BigInt(Date.now());

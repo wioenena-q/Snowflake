@@ -13,7 +13,7 @@ describe("Snowflake ID", () => {
     expect(Number(id)).greaterThan(0);
   });
 
-  it("Properly mask the identity of a snowflake", () => {
+  it("Properly mask the ID of a snowflake", () => {
     const workerId = 0x1n;
     const processId = 0x0n;
     const epoch = BigInt(Date.now());
