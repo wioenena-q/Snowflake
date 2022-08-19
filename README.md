@@ -5,21 +5,27 @@
 ```bash
 npm install @wioenena.q/snowflake # or yarn add @wioenena.q/snowflake
 ```
+CommonJS
 ```js
-const { generateSnowflakeID, parseSnowflakeID } = require("@wioenena.q/snowflake");
+const { Snowflake } = require("@wioenena.q/snowflake");
+```
+ESM
+```js
+import { Snowflake } from "@wioenena.q/snowflake";
 ```
 ### deno
 ```ts
-import { generateSnowflakeID, parseSnowflakeID } from "https://raw.githubusercontent.com/wioenena-q/Snowflake/master/src/index.ts";
+import { Snowflake } from "https://raw.githubusercontent.com/wioenena-q/Snowflake/master/src/index.ts";
 ```
 
 ## Usage
 ```js
 const epoch = Date.now();
-const workerId = 2;
-const processId = 0;
+const workerId = 1;
+const processId = 1;
 
-const id = generateSnowflakeID(epoch, workerId, processId);
+const snowflake = new Snowflake(epoch);
+const id = snowflake.generate(workerId, processId);
 console.log(id);
 const parsed = parseSnowflakeID(id);
 console.log(parsed);
