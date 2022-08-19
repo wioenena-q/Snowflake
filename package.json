@@ -11,9 +11,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "node:test": "mocha src/__tests__/node/*.spec.js",
-    "deno:test": "deno test src/__tests__/deno/index.spec.ts",
-    "test": "npm run node:test && npm run deno:test"
+    "test": "mocha src/__tests__/node/*.spec.js"
   },
   "keywords": [
     "twitter",
