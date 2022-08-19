@@ -1,7 +1,15 @@
-import type { DISCORD_EPOCH, TWITTER_EPOCH } from './dist/types/constants';
-import type { DiscordSnowflake } from './dist/types/DiscordSnowflake';
-import type { ParsedSnowflake, Snowflake } from './dist/types/Snowflake';
-import type { TwitterSnowflake } from './dist/types/TwitterSnowflake';
+import { DISCORD_EPOCH, TWITTER_EPOCH } from './dist/types/constants';
+import { DiscordSnowflake } from './dist/types/DiscordSnowflake';
+import { ParsedSnowflake, Snowflake } from './dist/types/Snowflake';
+import { TwitterSnowflake } from './dist/types/TwitterSnowflake';
+
+declare const _default: {
+  DiscordSnowflake: typeof DiscordSnowflake;
+  Snowflake: typeof Snowflake;
+  TwitterSnowflake: typeof TwitterSnowflake;
+  DISCORD_EPOCH: typeof DISCORD_EPOCH;
+  TWITTER_EPOCH: typeof TWITTER_EPOCH;
+};
 
 declare module '@wioenena.q/snowflake' {
   export {
@@ -12,4 +20,6 @@ declare module '@wioenena.q/snowflake' {
     DISCORD_EPOCH,
     TWITTER_EPOCH
   };
+
+  export = _default;
 }
