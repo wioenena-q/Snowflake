@@ -148,7 +148,7 @@ export class Snowflake {
    * Iterates the id by the specified amount
    * @param n - How many iterate
    */
-  public *itarete(n: number) {
+  public *iterate(n: number) {
     while (n-- !== 0) {
       yield this.generate();
     }

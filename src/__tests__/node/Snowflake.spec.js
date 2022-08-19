@@ -18,7 +18,7 @@ describe('Snowflake', () => {
   });
 
   it("Iterate through the snowflake's ID", () => {
-    const ids = [...snowflake.itarete(10)];
+    const ids = [...snowflake.iterate(10)];
     expect(ids.length).eq(10);
     ids.forEach((id) => {
       expect(Number(id)).greaterThan(0);
