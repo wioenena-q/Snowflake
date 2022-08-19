@@ -6,6 +6,7 @@
     "outDir": "dist",
     "declaration": true,
     "module": "CommonJS",
-    "target": "ESNext"
+    "target": "ESNext",
+    "declarationDir": "dist/types",
   }
 }
