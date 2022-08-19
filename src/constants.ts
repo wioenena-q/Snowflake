@@ -1,0 +1,13 @@
+export const WORKER_ID_BITS = 5n;
+export const PROCESS_ID_BITS = 5n;
+export const MAX_WORKER_ID = -1n ^ (-1n << WORKER_ID_BITS);
+export const MAX_PROCESS_ID = -1n ^ (-1n << PROCESS_ID_BITS);
+export const SEQUENCE_BITS = 12n;
+export const WORKER_ID_SHIFT = SEQUENCE_BITS;
+export const PROCESS_ID_SHIFT = SEQUENCE_BITS + WORKER_ID_BITS;
+export const TIMESTAMP_SHIFT = SEQUENCE_BITS + WORKER_ID_BITS + PROCESS_ID_BITS;
+export const SEQUENCE_MASK = -1n ^ (-1n << SEQUENCE_BITS);
+export const WORKER_ID_MASK = 0x1f000n;
+export const PROCESS_ID_MASK = 0x3e0000n;
+export const DISCORD_EPOCH = 1420070400000;
+export const TWITTER_EPOCH = 1288834974657;
