@@ -1,9 +1,14 @@
 {
   "name": "@wioenena.q/snowflake",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Twitter Snowflake ID implemented for nodejs and deno",
-  "main": "dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./types.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "node:test": "mocha src/__tests__/node/*.spec.js",
