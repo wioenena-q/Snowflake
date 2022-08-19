@@ -13,10 +13,6 @@ ESM
 ```js
 import { Snowflake } from "@wioenena.q/snowflake";
 ```
-### deno
-```ts
-import { Snowflake } from "https://raw.githubusercontent.com/wioenena-q/Snowflake/master/src/index.ts";
-```
 
 ## Usage
 ```js
@@ -27,7 +23,7 @@ const processId = 1;
 const snowflake = new Snowflake(epoch);
 const id = snowflake.generate(workerId, processId);
 console.log(id);
-const parsed = parseSnowflakeID(id);
+const parsed = snowflake.parse(id);
 console.log(parsed);
 ```
 
