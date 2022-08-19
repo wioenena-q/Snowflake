@@ -1,6 +1,6 @@
 {
   "name": "@wioenena.q/snowflake",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Twitter Snowflake ID implemented for nodejs and deno",
   "types": "./types.d.ts",
   "exports": {
